@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@mipmap/img_tab_bottom"
+    android:id="@+id/app_bg"
+    android:tileMode="repeat"
+    android:dither="true"/>

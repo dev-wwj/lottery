@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/id_btn_gochart"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/str_chart"
+        style="@style/ButtonNoBackground"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorLightGray0"/>
+    <Button
+        android:id="@+id/id_btn_recent_draw"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/str_recent_draw"
+        style="@style/ButtonNoBackground"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorLightGray0"/>
+    <Button
+        android:id="@+id/id_btn_hidden_omit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/str_omit_hidden"
+        style="@style/ButtonNoBackground"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorLightGray0"/>
+    <Button
+        android:id="@+id/id_btn_playType_intro"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/str_playType_intro"
+        style="@style/ButtonNoBackground"/>
+</LinearLayout>

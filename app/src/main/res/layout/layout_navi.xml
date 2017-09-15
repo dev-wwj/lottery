@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dip"
+    android:background="@color/colorGreen">
+    <Button
+        android:id="@+id/id_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/img_back"
+        style="@style/NaviBackBtnStyle" />
+    <TextView
+        android:id="@+id/id_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewNaviTitle"
+        android:text="@string/app_name"/>
+    <Button
+        android:id="@+id/id_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/NaviRightBtnStyle"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="100dp"/>
+</RelativeLayout>

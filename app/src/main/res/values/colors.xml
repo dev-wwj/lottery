@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#DD00BC8C</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorGreen">#00bc8c</color>
+    <color name="colorLightGreen">#CDEEEB</color>
+    <color name="colorLightGreen1">#6BD590</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorClean">#00ffffff</color>
+    <color name="colorGray">#ff6c6c6c</color>
+    <color name="colorTranslucence">#776c6c6c</color>
+    <color name="colorLightGray0">#aaaaaa</color>
+    <color name="colorLightGray">#eeeeee</color>
+    <color name="colorTabbarBg">#eeeeee</color>
+    <color name="colorTabbarItemTextDefault">#666666</color>
+    <color name="colorRed">#FB3838</color>
+    <color name="colorBlue">#3F51B5</color>
+    <color name="colorBgMineHeader">#062331</color>
+    <color name="colorOrange">#FF8A00</color>
+    <color name="colorYellow">#F2D027</color>
+    <color name="colorBlueGray">#BDCFD9</color>
+</resources>

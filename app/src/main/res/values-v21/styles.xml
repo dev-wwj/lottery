@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="ButtonRoundGreen">
+        <item name="android:layout_marginLeft">40dip</item>
+        <item name="android:layout_marginRight">40dip</item>
+        <item name="android:backgroundTint">@color/colorGreen</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="ButtonNormal">
+        <item name="android:backgroundTint">@color/colorGreen</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+</resources>

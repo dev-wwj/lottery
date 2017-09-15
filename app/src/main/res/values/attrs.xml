@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NaviLayout">
+        <attr name="title" format="string"/>
+        <attr name="backHidden" format="boolean"/>
+        <attr name="btnRightHidden" format="boolean"/>
+        <attr name="btnRigthSrc" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="MenuLayout">
+        <attr name="item0" format="string"/>
+        <attr name="item1" format="string"/>
+        <attr name="item2" format="string"/>
+    </declare-styleable>
+    <!--选号-->
+    <declare-styleable name="SelBallView">
+        <attr name="snum" format="string"/>
+        <attr name="ballColor" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="SelNumsStyle0Layout">
+        <attr name="digit" format="string"/>
+        <attr name="hiddenOmit" format="boolean"/>
+    </declare-styleable>
+</resources>

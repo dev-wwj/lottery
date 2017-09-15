@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="40dip">
+    <TextView
+        android:id="@+id/id_tv_num"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/str_placeholder"
+        style="@style/TextRecyclerItemBold"
+        android:textStyle="normal|bold"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/id_tv_nowomit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/str_placeholder"
+        style="@style/TextRecyclerItemNormal"/>
+    <TextView
+        android:id="@+id/id_tv_maxomit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/str_placeholder"
+        style="@style/TextRecyclerItemNormal"/>
+
+    <com.scrop.view.mycheckbox.MyCheckBoxForOmit
+        android:id="@+id/id_mcbfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorClean"/>
+</LinearLayout>

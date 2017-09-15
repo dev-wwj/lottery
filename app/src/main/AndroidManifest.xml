@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.scrop.youcaile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.scrop.base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.scrop.account.AccountActivity"
+            android:label="@string/title_activity_account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.scrop.account.RegisterActivity" />
+        <activity android:name="com.scrop.mine.MessageActivity" />
+
+        <receiver android:name="com.scrop.broadcast.YouCaileReceiver">
+            <intent-filter>
+                <action android:name="com.scorp.youcaile" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.scrop.mine.MyAccountActivity"
+            android:label="@string/title_activity_my_account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.scrop.mine.SignActivity" />
+        <activity android:name="com.scrop.mine.IdentityInfoActivity" />
+        <activity android:name="com.scrop.mine.ContactActivity" />
+        <activity android:name="com.scrop.mine.BankCardInfoActivity" />
+        <activity android:name="com.scrop.mine.PasswordManagerActivity" />
+        <activity android:name="com.scrop.mine.SetPwdActivity" />
+        <activity android:name="com.scrop.account.RegisterSuccessActivity" />
+        <activity android:name="com.scrop.mine.RelNameAttestationActivity" />
+        <activity android:name="com.scrop.web.NotiWebActivity" />
+        <activity android:name="com.scrop.hall.LotteryPtActivity" />
+        <activity android:name="com.scrop.hall.BalanceActivity"></activity>
+    </application>
+
+</manifest>

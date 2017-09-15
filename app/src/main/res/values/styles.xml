@@ -1,0 +1,162 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Tabbar Item -->
+    <style name="TabbarItemBtn" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:drawablePadding">5dip</item>
+        <item name="android:layout_margin">3.0dip</item>
+        <item name="android:textColor">@drawable/tabbar_item_text_color</item>
+    </style>
+
+    <style name="TextViewNaviTitle">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:autoLink">none</item>
+    </style>
+
+    <style name="NaviBackBtnStyle" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@color/colorClean</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+    </style>
+    <style name="NaviRightBtnStyle" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@color/colorClean</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+    </style>
+    <!--TextStyle 分类标题 Green-->
+    <style name="TextViewColorGreen">
+        <item name="android:textSize">15dip</item>
+        <item name="android:textColor">@color/colorGreen</item>
+    </style>
+    <!-- RecyclerView 标题 -->
+    <style name="TextRecyclerTitle">
+        <item name="android:textSize">15dip</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextRecyclerItemNormal">
+        <item name="android:textSize">15dip</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextRecyclerItemBold" parent="TextRecyclerItemNormal">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextRecyclerItemBoldBig" parent="TextRecyclerItemBold">
+        <item name="android:textSize">20dip</item>
+    </style>
+
+    <!--Mine 菜单栏图片-->
+    <style name="MineImgViewForMenu">
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:padding">13dip</item>
+    </style>
+
+    <style name="MineTextViewForMenu">
+        <item name="android:textSize">18dip</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="EditTextAccount">
+        <item name="android:layout_marginLeft">40dip</item>
+        <item name="android:layout_marginRight">40dip</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:drawablePadding">10dip</item>
+    </style>
+
+    <style name="EditTextRegister">
+        <item name="android:layout_marginLeft">20dip</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:padding">10dip</item>
+    </style>
+
+    <style name="EditTextNoLine">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="EditTextForSingleLineNum" parent="EditTextNoLine">
+        <item name="android:numeric">integer</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ButtonAccount">
+        <item name="android:layout_marginLeft">40dip</item>
+        <item name="android:layout_marginRight">40dip</item>
+        <item name="android:background">@drawable/shape_button_fill</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="ButtonNoBackground">
+        <item name="android:background">@color/colorClean</item>
+    </style>
+    <style name="ButtonNormal">
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/colorGreen</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="ButtonRoundGreen">
+        <item name="android:layout_marginLeft">40dip</item>
+        <item name="android:layout_marginRight">40dip</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/colorGreen</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="ButtonTintWhite">
+        <item name="android:layout_marginTop">5dip</item>
+        <item name="android:layout_marginBottom">5dip</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/colorWhite</item>
+    </style>
+    <style name="MenuItemRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:drawablePadding">5dip</item>
+        <item name="android:layout_margin">3.0dip</item>
+        <item name="android:textColor">@drawable/tabbar_item_text_color</item>
+        <item name="android:drawableBottom">@drawable/menu_item_drawbottom_color</item>
+    </style>
+
+    <style name="RadioButtonStyleNoChange" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">17.0dip</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:textColor">@color/colorYellow</item>
+    </style>
+
+    <style name="RadioButtonStyleSelNumsFilter"
+        parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/item_rb_filter_sel</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+</resources>

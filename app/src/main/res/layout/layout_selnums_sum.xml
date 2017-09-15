@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorTranslucence"/>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:rowCount="2">
+        <LinearLayout
+            android:layout_columnWeight="2"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/id_tv_digit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_selnum"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:padding="2dp"
+                android:textColor="@color/colorWhite"
+                android:background="@mipmap/img_sn_ibg"/>
+            <TextView
+                android:id="@+id/id_tv_omit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_omit0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:textColor="@color/colorWhite"
+                android:background="@mipmap/img_sn_ibg"/>
+        </LinearLayout>
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_0"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_1"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_2"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_3"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_4"
+            android:layout_columnWeight="1" />
+        <TextView
+            android:layout_columnWeight="2" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_5"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_6"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_7"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_8"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_9"
+            android:layout_columnWeight="1" />
+        <TextView
+            android:layout_columnWeight="2" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_10"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_11"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_12"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_13"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_14"
+            android:layout_columnWeight="1" />
+        <TextView
+            android:layout_columnWeight="2" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_15"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_16"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_17"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_18"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_19"
+            android:layout_columnWeight="1" />
+        <TextView
+            android:layout_columnWeight="2" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_20"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_21"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_22"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_23"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_24"
+            android:layout_columnWeight="1" />
+        <TextView
+        android:layout_columnWeight="2" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_25"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_26"
+            android:layout_columnWeight="1" />
+        <com.scrop.view.ballview.BallOmitView
+            android:id="@+id/id_bov_27"
+            android:layout_columnWeight="1" />
+    </GridLayout>
+</LinearLayout>

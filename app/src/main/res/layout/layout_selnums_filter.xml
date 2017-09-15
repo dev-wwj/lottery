@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorTranslucence"/>
+
+    <RadioGroup
+        android:layout_gravity="center_horizontal"
+        android:layout_width="230dp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shape_border_round_white">
+        <RadioButton
+            android:id="@+id/id_rb_nofilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_no_filter"
+            android:checked="true"
+            style="@style/RadioButtonStyleSelNumsFilter" />
+        <RadioButton
+            android:id="@+id/id_rb_filter_same_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_filter_same_three"
+            style="@style/RadioButtonStyleSelNumsFilter" />
+        <RadioButton
+            android:id="@+id/id_rb_filter_same_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_filter_same_two"
+            style="@style/RadioButtonStyleSelNumsFilter"/>
+        <RadioButton
+            android:id="@+id/id_rb_filter_had_same"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_filter_had_same"
+            style="@style/RadioButtonStyleSelNumsFilter"/>
+    </RadioGroup>
+</LinearLayout>

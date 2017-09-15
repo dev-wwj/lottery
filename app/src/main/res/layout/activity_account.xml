@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.scrop.account.AccountActivity"
+    android:gravity="center_horizontal">
+    <com.scrop.navi.NaviLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/str_user_login"
+        android:id="@+id/id_navi"
+        app:backHidden="false">
+    </com.scrop.navi.NaviLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_logo"
+        android:layout_margin="40dip"
+        android:id="@+id/imageView" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/id_et_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:drawableLeft="@mipmap/img_account"
+        style="@style/EditTextAccount"
+        android:background="@drawable/shape_text_border_green"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/id_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:drawableLeft="@mipmap/img_password"
+        style="@style/EditTextAccount"
+        android:paddingLeft="25dp"
+        android:layout_marginTop="20dip"
+        android:inputType="textPassword"
+        android:background="@drawable/shape_text_border_green" />
+
+    <Button
+        android:id="@+id/id_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:text="@string/str_login"
+        style="@style/ButtonAccount"/>
+    <Button
+        android:id="@+id/id_btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:text="@string/str_register"
+        style="@style/ButtonAccount"/>
+    <Button
+        android:id="@+id/id_btn_forgetPwd"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:text="@string/str_forgetpwd"
+        android:background="@color/colorClean"/>
+</LinearLayout>
