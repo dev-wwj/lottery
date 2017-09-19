@@ -24,6 +24,8 @@ import android.widget.TextView;
 import com.scrop.adapter.OpenNum2Adapter;
 import com.scrop.base.BaseActivity;
 import com.scrop.base.BaseFragment;
+import com.scrop.constant.ConstantConfig;
+import com.scrop.entity.OpenNumResBean;
 import com.scrop.entity.PlayTypeCheckedBean;
 import com.scrop.hall.selnumsfragment.SelNumsFragment;
 import com.scrop.hall.selnumsfragment.SelNumsInputFragment;
@@ -41,6 +43,11 @@ import com.scrop.minterface.listener.NaviAllActionListener;
 import com.scrop.minterface.listener.OnDataChangeListener;
 import com.scrop.minterface.listener.PlayTypeCheckedListener;
 import com.scrop.navi.NaviLayout;
+import com.scrop.networking.CommonOkHttpClient;
+import com.scrop.networking.listener.DisposeDataHandle;
+import com.scrop.networking.listener.DisposeDataListener;
+import com.scrop.networking.request.CommonRequest;
+import com.scrop.networking.request.RequestParams;
 import com.scrop.tool.FromDpToPx;
 import com.scrop.tool.popupwindow.MyPopupWindow;
 import com.scrop.view.bubblecontent.BubbleSNBottomLayout;
@@ -48,6 +55,10 @@ import com.scrop.view.bubblecontent.BubbleSNTopLayout;
 import com.scrop.view.lottery.OpenNumViewGroup;
 import com.scrop.youcaile.R;
 import com.yuyh.library.BubblePopupWindow;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +72,7 @@ public class LotteryPlayFragment extends BaseFragment implements View.OnTouchLis
     MyPopupWindow popupWindow ;
     PlayTypeLayout playTypeLayout; // 玩法选择
 
+    TextView tvIssue;
     OpenNumViewGroup openNumViewGroup;
     RecyclerView openNumsRecyclerView;
 
@@ -83,6 +95,7 @@ public class LotteryPlayFragment extends BaseFragment implements View.OnTouchLis
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_lottery_play, container, false);
         initSubViews(view);
+        serverData();
         return view;
     }
 
@@ -110,8 +123,9 @@ public class LotteryPlayFragment extends BaseFragment implements View.OnTouchLis
 
         initPlayTypeView(this.getContext());
 
+        tvIssue = (TextView) view.findViewById(R.id.id_tv_issue);
         openNumViewGroup = (OpenNumViewGroup) view.findViewById(R.id.id_onvg);
-        openNumViewGroup.numsWithGameId("1234567","null");
+//        openNumViewGroup.numsWithGameId("1234567","null");
 
         initOpenNums(view);
         initSelNumContent(view);
@@ -130,6 +144,7 @@ public class LotteryPlayFragment extends BaseFragment implements View.OnTouchLis
         initTopbubble(getContext());
 
     }
+
 
     private void initPlayTypeView(final Context context) {
         popupWindow = new MyPopupWindow(context);
@@ -254,7 +269,8 @@ public class LotteryPlayFragment extends BaseFragment implements View.OnTouchLis
     private void initOpenNumsRecyclerView(View view) {
         openNumsRecyclerView = (RecyclerView) view.findViewById(R.id.id_recycler_opennum);
         openNumsRecyclerView.setLayoutManager(new GridLayoutManager(this.getContext(),1,1,false));
-        on2adapter = new OpenNum2Adapter();
+        on2adapter = new OpenNum2Adapter(new ArrayList<OpenNumResBean.ValueBean.ResultBean>(){},
+                ((LotteryPtActivity)getActivity() ).gameId);
         openNumsRecyclerView.setAdapter(on2adapter);
     }
 
@@ -478,4 +494,52 @@ public class LotteryPlayFragment extends BaseFragment implements View.OnTouchLis
         Intent i = new Intent(getContext(),BalanceActivity.class);
         startActivity(i);
     }
+
+
+    //  获取数据  --------------------------------------------------------------------------
+    private void serverData(){
+         getOpenNum();
+    }
+
+    private void getOpenNum() {
+        Map<String ,Object> mapParams = new HashMap<String ,Object>(){
+            {
+                put("action","getOpenNum");
+                put("gameid",((LotteryPtActivity) getActivity()).gameId);
+                put("pageindex",1);
+                put("pagesize",10);
+            }
+        };
+        CommonOkHttpClient.post(CommonRequest.createPostRequest(ConstantConfig.URL_SERVICE,new
+                RequestParams(mapParams)),new
+                DisposeDataHandle(OpenNumResBean.class,new DisposeDataListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+            @Override
+            public void onSuccess(Object responseObj) {
+//                loadNewses(responseObj);
+                openNumsReload(responseObj);
+            }
+
+            @Override
+            public void onFailure(Object responseObj) {
+                Log.i("onFailure" ,responseObj.toString());
+            }
+        }));
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+    private void openNumsReload(Object responseObj) {
+        OpenNumResBean bean = (OpenNumResBean) responseObj;
+        openNumViewGroup.numsWithGameId(bean.getValue().getResult().get(0).getNum(),(
+                (LotteryPtActivity)
+                getActivity())
+                .gameId);
+        tvIssue.setText(bean.getValue().getResult().get(0).getTerm() + " 期");
+//        Log.e("openNums", (String) responseObj);
+        on2adapter.setOnbs(bean.getValue().getResult());
+        on2adapter.notifyDataSetChanged();
+    }
+
+
 }

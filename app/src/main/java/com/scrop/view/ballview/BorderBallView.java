@@ -38,4 +38,16 @@ public class BorderBallView extends TextView {
         this.border = border;
         this.setBackgroundDrawable(border);
     }
+
+    public void redBall(){
+        Drawable borderRed = getResources().getDrawable(R.drawable.shape_ball_red);
+        setBackgroundDrawable(borderRed);
+        setTextColor(getResources().getColor(R.color.colorWhite));
+    }
+
+    public void blueBall(){
+        Drawable borderRed = getResources().getDrawable(R.drawable.shape_ball_blue);
+        setBackgroundDrawable(borderRed);
+        setTextColor(getResources().getColor(R.color.colorWhite));
+    }
 }

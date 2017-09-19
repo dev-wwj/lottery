@@ -1,6 +1,5 @@
 package com.scrop.base;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
 import com.githang.statusbar.StatusBarCompat;
-import com.scrop.mimpl.PropertiesConfig;
 import com.scrop.youcaile.R;
 
 /**
@@ -18,8 +16,8 @@ import com.scrop.youcaile.R;
  */
 
 public class BaseActivity extends AppCompatActivity {
-    static public PropertiesConfig propertiesConfig = null;
-    public String URL_SERVICE = null;
+//    static public PropertiesConfig propertiesConfig = null;
+//    public String URL_SERVICE = null;
 
     public BaseActivity() {
     }
@@ -59,24 +57,12 @@ public class BaseActivity extends AppCompatActivity {
         StatusBarCompat.setStatusBarColor(this,getResources().getColor(R.color.colorPrimaryDark,
                 this.getTheme())
                 ,false);
-
     }
 
 
     private void initPtrpertiesConfig(){
-        this.propertiesConfig = new PropertiesConfig() {
-            @Override
-            protected Context getContext() {
-                return BaseActivity.this;
-            }
-
-            @Override
-            protected String getPropertyFileName() {
-                return "config.properties";
-            }
-        };
-        this.URL_SERVICE = (propertiesConfig.getString(Constants.HOST ) + propertiesConfig.getString
-                (Constants.PATH));
+//        new  ConstantConfig(this);
+//        this.URL_SERVICE = ConstantConfig.URL_SERVICE;
 
     }
 

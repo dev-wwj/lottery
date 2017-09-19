@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.scrop.base.BaseActivity;
+import com.scrop.constant.ConstantConfig;
 import com.scrop.entity.LoginBean;
 import com.scrop.minterface.listener.NaviActionListener;
 import com.scrop.navi.NaviLayout;
@@ -105,7 +106,7 @@ public class AccountActivity extends BaseActivity implements View.OnClickListene
         mapParams.put("cat","202");
         RequestParams params = new RequestParams(mapParams);
        ;
-        CommonOkHttpClient.post(CommonRequest.createPostRequest(URL_SERVICE,params),new
+        CommonOkHttpClient.post(CommonRequest.createPostRequest(ConstantConfig.URL_SERVICE,params),new
                 DisposeDataHandle(LoginBean.class,new DisposeDataListener() {
             @Override
             public void onSuccess(Object responseObj) {

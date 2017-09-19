@@ -6,6 +6,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentTransaction;
 
 import com.scrop.base.BaseActivity;
+import com.scrop.constant.ConstantConfig;
 import com.scrop.tabbar.TabbarFragment;
 
 public class MainActivity extends BaseActivity {
@@ -20,5 +21,6 @@ public class MainActivity extends BaseActivity {
             tabbarFragment = new TabbarFragment();
         }
         transaction.add(R.id.id_content,tabbarFragment).commit();
+        new ConstantConfig(this);
     }
 }

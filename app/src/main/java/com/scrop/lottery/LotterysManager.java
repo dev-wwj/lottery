@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.scrop.base.MyApplication;
+import com.scrop.constant.ConstantsLottery;
 import com.scrop.entity.LotterysObj;
 import com.scrop.entity.OmitPlayTypeObj;
 import com.scrop.entity.PlayTypeObj;
@@ -124,6 +125,30 @@ public  class LotterysManager {
             }
         }
         return null;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    //
+    public static String kindOfLotteryOpenNums(String lotteryId){
+//        String[] sscs = {"CQSSC","TJSSC","XJSSC","JXSSC","SDSYY","JX115","SHSSL","FC3D","TCP3","TCP5"};
+        //
+        // 时时彩，11选5，时时乐，排列三，排列五
+        if (lotteryId.equalsIgnoreCase("TCDLT")){
+            return ConstantsLottery.DLT;
+        }else if (lotteryId.equalsIgnoreCase("FCSSQ")){
+            return ConstantsLottery.SSQ;
+        }else {
+            return ConstantsLottery.SSC;
+        }
     }
 
 }

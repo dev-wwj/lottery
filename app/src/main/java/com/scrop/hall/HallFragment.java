@@ -16,7 +16,8 @@ import android.view.ViewGroup;
 import com.scrop.adapter.ImgTextAdapter;
 import com.scrop.base.BaseActivity;
 import com.scrop.base.BaseFragment;
-import com.scrop.base.Constants;
+import com.scrop.constant.ConstantConfig;
+import com.scrop.constant.Constants;
 import com.scrop.entity.ImgText;
 import com.scrop.entity.IndexPicResBean;
 import com.scrop.entity.LotterysObj;
@@ -126,7 +127,7 @@ public class HallFragment extends BaseFragment {
         Map<String ,Object> mapParams = new HashMap<>();
         mapParams.put("action","mobile_indexpic");
         BaseActivity activity = (BaseActivity) getActivity();
-        CommonOkHttpClient.post(CommonRequest.createPostRequest(activity.URL_SERVICE,new
+        CommonOkHttpClient.post(CommonRequest.createPostRequest(ConstantConfig.URL_SERVICE,new
                 RequestParams(mapParams)),new
                 DisposeDataHandle(IndexPicResBean.class,new DisposeDataListener() {
             @Override
@@ -174,7 +175,7 @@ public class HallFragment extends BaseFragment {
         mapParams.put("pageindex",1);
         mapParams.put("pagesize",15);
         BaseActivity activity = (BaseActivity) getActivity();
-        CommonOkHttpClient.post(CommonRequest.createPostRequest(activity.URL_SERVICE,new
+        CommonOkHttpClient.post(CommonRequest.createPostRequest(ConstantConfig.URL_SERVICE,new
                 RequestParams(mapParams)),new
                 DisposeDataHandle(NewsResBean.class,new DisposeDataListener() {
             @Override

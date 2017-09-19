@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.scrop.base.Constants;
+import com.scrop.constant.Constants;
 import com.scrop.entity.MemInfoBean;
 import com.scrop.mimpl.PropertiesConfig;
 import com.scrop.networking.CommonOkHttpClient;

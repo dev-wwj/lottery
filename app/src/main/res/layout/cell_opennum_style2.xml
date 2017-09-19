@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:text="@string/str_time_placeholder"
         android:orientation="horizontal">
     </LinearLayout>

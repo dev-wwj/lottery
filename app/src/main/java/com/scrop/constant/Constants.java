@@ -1,4 +1,4 @@
-package com.scrop.base;
+package com.scrop.constant;
 
 /**
  * Created by Scrop on 2017/7/19.

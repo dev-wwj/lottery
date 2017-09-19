@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.scrop.base.BaseActivity;
+import com.scrop.constant.ConstantConfig;
 import com.scrop.entity.CheckMobileResBean;
 import com.scrop.entity.RegisterResBean;
 import com.scrop.entity.SendVerificationCodeResBean;
@@ -100,7 +101,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         Map<String ,Object> mapParams = new HashMap<>();
         mapParams.put("action","chkMobile");
         mapParams.put("mobile",phoneNum);
-        CommonOkHttpClient.post(CommonRequest.createPostRequest(URL_SERVICE,new RequestParams
+        CommonOkHttpClient.post(CommonRequest.createPostRequest(ConstantConfig.URL_SERVICE,new RequestParams
                 (mapParams)),new DisposeDataHandle(CheckMobileResBean.class,new DisposeDataListener() {
             @Override
             public void onSuccess(Object responseObj) {
@@ -133,7 +134,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         mapParams.put("mobile",phoneNum);
         mapParams.put("cat","jymReg");
         RequestParams params = new RequestParams(mapParams);
-        CommonOkHttpClient.post(CommonRequest.createPostRequest(URL_SERVICE,params),new
+        CommonOkHttpClient.post(CommonRequest.createPostRequest(ConstantConfig.URL_SERVICE,params),new
                 DisposeDataHandle(SendVerificationCodeResBean.class,new DisposeDataListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
@@ -227,7 +228,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         mapParams.put("mobile",phoneNum);
         mapParams.put("password",password);
         RequestParams params = new RequestParams(mapParams);
-        CommonOkHttpClient.post(CommonRequest.createPostRequest(URL_SERVICE,params),new
+        CommonOkHttpClient.post(CommonRequest.createPostRequest(ConstantConfig.URL_SERVICE,params),new
                 DisposeDataHandle(RegisterResBean.class,new DisposeDataListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
